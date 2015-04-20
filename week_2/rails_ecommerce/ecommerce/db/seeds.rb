@@ -12,4 +12,4 @@
 
 
 #BACKPACKS
-# Backpack.create()
+# Backpack.create(name:"", capacity:, pockets:, waterproof:, image:"")
