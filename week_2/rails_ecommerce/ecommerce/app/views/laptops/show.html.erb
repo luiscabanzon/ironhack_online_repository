@@ -1,0 +1,32 @@
+<h1>Specific Laptop</h1>
+
+<h3>
+  <strong>Brand &amp Model:</strong><br>
+  <%= @laptop.brand %>
+  <%= @laptop.model %>
+</h3>
+
+<p>
+  <strong>Processor:</strong>
+  <%= @laptop.processor_brand %>
+</p>
+
+<p>
+  <strong>RAM(GB):</strong>
+  <%= @laptop.RAM %>
+</p>
+
+<p>
+  <strong>price(euros):</strong>
+  <%= @laptop.price %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @laptop.image %>
+</p>
+
+
+<%= link_to 'Back', laptops_path %>
+<%= link_to 'Edit', edit_laptop_path(@laptop)%>
+<%= link_to 'Destroy', laptop_path(@laptop), method: :delete, data: { confirm: 'Are you sure?' } %>

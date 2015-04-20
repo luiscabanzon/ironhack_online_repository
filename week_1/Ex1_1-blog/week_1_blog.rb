@@ -1,4 +1,3 @@
-require 'pry'
 require 'colorize'
 
 class Blog
@@ -37,7 +36,7 @@ class Blog
     
     
     def publish_front_page(p = 1)# To print all the posts
-        .clear #OPTIONAL to clear the screen (needs pry)
+        system("clear")
         @n_pages = (archive.length.to_f / 3).ceil
         @active_page = p
         

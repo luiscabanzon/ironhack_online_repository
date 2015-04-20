@@ -1,0 +1,11 @@
+<h1>Laptops Section</h1>
+<% @laptops.each do |laptop| %>
+<div><%= laptop.model %>
+	<%= link_to 'Show',  laptop_path(laptop)%>
+	<%= link_to "Edit", edit_laptop_path(laptop)%>
+	<%= link_to 'Destroy', laptop_path(laptop), method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+<% end %>
+
+
+<p><%= link_to 'Add laptop', new_laptop_path %></p>

@@ -1,0 +1,37 @@
+<h1>Editing Laptop</h1>
+<%= form_for :laptop, url: laptop_path(@laptop), method: :patch do |f| %>
+  <p>
+    <%= f.label :brand %><br>
+    <%= f.text_field :brand %>
+  </p>
+
+  <p>
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </p>
+
+  <p>
+    <%= f.label :processor_brand %><br>
+    <%= f.text_field :processor_brand %>
+  </p>
+
+    <p>
+    RAM<br>
+    <%= f.number_field :RAM %> GB
+  </p>
+
+    <p>
+    <%= f.label :price %><br>
+    <%= f.number_field :price %> euros
+  </p>
+
+    <p>
+    <%= f.label :image %> url<br>
+    <%= f.text_field :image %> (not mandatory)
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+<%= link_to 'Back', laptops_path %>
