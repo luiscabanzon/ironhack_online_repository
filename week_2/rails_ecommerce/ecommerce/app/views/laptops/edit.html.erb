@@ -1,4 +1,12 @@
-<h1>Editing Laptop</h1>
+<div style = "background-color:#9d9d9d; color:#fff">
+<br><br><br><br>
+<h1 style = "text-align:center">Editing Laptop</h1>
+<br><br>
+</div>
+
+
+<div style = "box-shadow: 10px 10px 5px #888888; float:center; width: 30%; margin: 0 35%">
+
 <%= form_for :laptop, url: laptop_path(@laptop), method: :patch do |f| %>
   <p>
     <%= f.label :brand %><br>
@@ -35,3 +43,7 @@
   </p>
 <% end %>
 <%= link_to 'Back', laptops_path %>
+
+
+</div>
+<br>

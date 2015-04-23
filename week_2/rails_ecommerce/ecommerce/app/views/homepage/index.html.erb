@@ -1,0 +1,89 @@
+   <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Laptops</h1>
+              <p>If you want to start typing <code>rails new app</code>, first you need to get a good equipment. Great developments need great equipment, and Ironhack Computers have the best choice for you.</p>
+              
+              <p><%= link_to "Laptops", laptops_path, class:"btn btn-lg btn-primary", role:"button" %></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Backpacks</h1>
+              <p>Purchasing a good equipment is also an important investment, and you should take care of it. We have thought on that and here you will find our selection of backpacks to take your laptop everywhere.</p>
+
+              <p><%= link_to "Backpacks", backpacks_path, class:"btn btn-lg btn-primary", role:"button" %></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Hack the iron!</h1>
+              <p>Maybe you already have what you need to start developing. Or maybe not? Got the skills? Ironhack ofers the best courses to train you on what the market and your projects need.</p>
+              <p><%= link_to "Skill up!", "http://www.ironhack.com", class:"btn btn-lg btn-primary", role:"button" %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="http://getbootstrap.com/examples/carousel/#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="http://getbootstrap.com/examples/carousel/#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="http://www.senorabaker.com/wp-content/uploads/2014/08/small-laptop-icon.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Laptops</h2>
+          <p>This is my laptop. There are many like it, but this one is mine. My laptop is my best friend. It is my life. I must master it as I must master my life. My laptop, without me, is useless. Without my laptop, I am useless...</p>
+
+          <%= link_to "View details »", laptops_path, class:"btn btn-default", role:"button" %>
+
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="http://airbnb.github.io/backpack/assets/img/backpack-icon.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Backpacks</h2>
+          <p>Make sure you are able to take your laptop on the safest and most confortable way. Check out our catalogue of backpacks and your workstyle will become more portable than ever. That is a laptop about</p>
+
+          <%= link_to "View details »", backpacks_path, class:"btn btn-default", role:"button" %>
+
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="http://pulsosocial.com/en/wp-content/uploads/2014/05/ironhack.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Bootcamps</h2>
+          <p>We are offering these products but, first of all, we are developers. Our bootcamps are lead by the best formers, and we guarantee here you'll find the quickest path to become a killer developer. From zero to hero in a matter of weeks!</p>
+
+          <%= link_to "View details »", "http://www.ironhack.com", class:"btn btn-default", role:"button" %>
+
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->

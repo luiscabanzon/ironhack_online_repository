@@ -1,11 +1,88 @@
-<h1>Backpacks Section</h1>
-<% @backpacks.each do |backpack| %>
-<div><%= backpack.name %>
-	<%= link_to 'Show',  backpack_path(backpack)%>
-	<%= link_to "Edit", edit_backpack_path(backpack)%>
-	<%= link_to 'Destroy', backpack_path(backpack), method: :delete, data: { confirm: 'Are you sure?' } %>
+
+
+
+<div style = "background-color:#9d9d9d; color:#fff">
+<br><br><br><br>
+<h1 style = "text-align:center">Backpacks</h1>
+<br><br>
 </div>
+
+
+
+
+<% side = 0 %>
+<% @backpacks.each do |backpack| %>
+<hr class="featurette-divider">
+<div class="row featurette">
+	<% if side % 2 == 0 %>
+		<div class="col-md-7">
+          <h2 class="featurette-heading"><%= backpack.name%><br>
+          	<span class="text-muted">Color: <%= backpack.color %></span></h2>
+          <p class="lead">Capacity: <%= backpack.capacity %> L</p>
+          <p class="lead">Pockets: <%= backpack.pockets %></p>
+          <p class="lead">Waterproof: 
+          	<% if backpack.waterproof %>
+          		<%= "Yes" %>
+          	<% else %>
+          		<%= "No" %>
+          	<% end %></p>
+          <p class="lead">Price: <%= backpack.price %> euros</p><br>
+        <%= link_to 'Show',  backpack_path(backpack)%>
+		<%= link_to "Edit", edit_backpack_path(backpack)%>
+		<%= link_to 'Destroy', backpack_path(backpack), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src=
+          <% if backpack.image.length == "" %>
+          <% return "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE3NCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjIzcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L2c+PC9zdmc+"%>
+          <% else %>
+          <%= backpack.image %>
+          <% end %>
+
+          data-holder-rendered="true">
+        </div>
+
+	<% else %>
+
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="500x500" src=
+          <% if backpack.image == "" %>
+          <% return "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxkZWZzLz48cmVjdCB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iI0VFRUVFRSIvPjxnPjx0ZXh0IHg9IjE3NCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojQUFBQUFBO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjIzcHQ7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+NTAweDUwMDwvdGV4dD48L2c+PC9zdmc+" %>
+          <% else %>
+          <%= backpack.image %>
+          <% end %>
+
+          data-holder-rendered="true">
+         </div>
+
+
+		<div class="col-md-7">
+          <h2 class="featurette-heading"><%= backpack.name%><br>
+          	<span class="text-muted">Color: <%= backpack.color %></span></h2>
+          <p class="lead">Capacity: <%= backpack.capacity %> L</p>
+          <p class="lead">Pockets: <%= backpack.pockets %></p>
+          <p class="lead">Waterproof: 
+          	<% if backpack.waterproof %>
+          		<%= "Yes" %>
+          	<% else %>
+          		<%= "No" %>
+          	<% end %></p>
+          <p class="lead">Price: <%= backpack.price %> euros</p><br>
+        <%= link_to 'Show',  backpack_path(backpack)%>
+		<%= link_to "Edit", edit_backpack_path(backpack)%>
+		<%= link_to 'Destroy', backpack_path(backpack), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+
+	<% end %>
+</div>
+<% side += 1%>
 <% end %>
 
 
+<hr class="featurette-divider">
+<h2>Not in the catalogue?</h2>
+
 <p><%= link_to 'Add backpack', new_backpack_path %></p>
+
+

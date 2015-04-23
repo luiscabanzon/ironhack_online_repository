@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  root :to => 'homepage#index'
+
+  resources :homepage
   resources :laptops
   resources :backpacks
 

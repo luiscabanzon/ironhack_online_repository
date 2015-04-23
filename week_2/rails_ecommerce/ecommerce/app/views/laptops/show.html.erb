@@ -1,30 +1,24 @@
-<h1>Specific Laptop</h1>
+<div style = "background-color:#9d9d9d; color:#fff">
+<br><br><br><br>
+<h1 style = "text-align:center"><%= @laptop.model %></h1>
+<br><br>
+</div>
 
-<h3>
-  <strong>Brand &amp Model:</strong><br>
-  <%= @laptop.brand %>
-  <%= @laptop.model %>
-</h3>
 
-<p>
-  <strong>Processor:</strong>
-  <%= @laptop.processor_brand %>
-</p>
+<hr class="featurette-divider">
+<div class="row featurette">
+  <div class="col-md-7">
+          <h2 class="featurette-heading"><%= @laptop.model%><br>
+            <span class="text-muted"><%= @laptop.brand %></span></h2>
+          <p class="lead">Processor: <%= @laptop.processor_brand%></p>
+          <p class="lead">RAM Memory: <%= @laptop.RAM %> GB</p>
+          <p class="lead">Price: <%= @laptop.price %> euros</p><br>
+  </div>
 
-<p>
-  <strong>RAM(GB):</strong>
-  <%= @laptop.RAM %>
-</p>
-
-<p>
-  <strong>price(euros):</strong>
-  <%= @laptop.price %>
-</p>
-
-<p>
-  <strong>Image:</strong>
-  <%= @laptop.image %>
-</p>
+  <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block"  alt="500x500" src= <%= @laptop.image %> data-holder-rendered="true">
+  </div>
+</div>
 
 
 <%= link_to 'Back', laptops_path %>
